@@ -1,0 +1,271 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 190, 95} не полностью лежит внутри изображения-источника {0, 0, 95, 190}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1910 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D4DC in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (25):
+
+     23:         txSetFillColor (TX_WHITE);
+     24: 
+=>   25:         txTransparentBlt (txDC(), xCar, yCar, 190, 95, Car, 0, 0, TX_WHITE);
+     26: 
+     27:         if(GetAsyncKeyState ('W'))
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 15 2024 17:53:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 15 2024 17:53:07
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 190, 95} не полностью лежит внутри изображения-источника {0, 0, 95, 190}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x47D8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D4DC in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (25):
+
+     23:         txSetFillColor (TX_WHITE);
+     24: 
+=>   25:         txTransparentBlt (txDC(), xCar, yCar, 190, 95, Car, 0, 0, TX_WHITE);
+     26: 
+     27:         if(GetAsyncKeyState ('W'))
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 15 2024 17:53:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 15 2024 17:54:33
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 270, 250} не полностью лежит внутри изображения-источника {0, 0, 190, 95}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x36D8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D524 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (27):
+
+     25:         txSetFillColor (TX_WHITE);
+     26: 
+=>   27:         txTransparentBlt (txDC(), 400, 300, 270, 250, Car, 0, 0, TX_WHITE);
+     28: 
+     29: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 19 2024 17:34:21, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 19 2024 17:34:29
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 250, 270} не полностью лежит внутри изображения-источника {0, 0, 190, 95}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x3EFC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D524 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (27):
+
+     25:         txSetFillColor (TX_WHITE);
+     26: 
+=>   27:         txTransparentBlt (txDC(), 400, 300, 250, 270, Car, 0, 0, TX_WHITE);
+     28: 
+     29: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 19 2024 17:35:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 19 2024 17:35:14
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {2000, 0, 2250, 270} не полностью лежит внутри изображения-источника {0, 0, 2000, 270}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x4948 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D53E in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (28):
+
+     26:         txSetFillColor (TX_WHITE);
+     27: 
+=>   28:         txTransparentBlt (txDC(), 400, 300, 250, 270, RunMan, n_kadr*250, 0, RGB(255, 242, 0));
+     29:         n_kadr += 1;
+     30: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 19 2024 17:43:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 19 2024 17:43:13
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {2000, 0, 2250, 270} не полностью лежит внутри изображения-источника {0, 0, 2000, 270}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2984 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041D552 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (30):
+
+     28:         txSetFillColor (TX_WHITE);
+     29: 
+=>   30:         txTransparentBlt (txDC(), xMan, yMan, 250, 270, RunMan, n_kadr*250, 0, RGB(255, 242, 0));
+     31: 
+     32: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Jan 19 2024 18:05:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Jan 19 2024 18:05:30
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#2: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x6626DF47 в функции SymGetLineFromAddrW64(). Попытка прочесть данные по адресу 0x056ADDD8 в модуле c:\codeblocks\mingw\include\Windows\MgwHelp32.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdrE0, Thread: 0x2C90 (Canvas). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x6626DF47 in c:\codeblocks\mingw\include\Windows\MgwHelp32.dll: SymGetLineFromAddrW64()
+# 2 0x752472DA in C:\WINDOWS\System32\msvcrt.dll: calloc()
+# 3 0x66244BF7 in c:\codeblocks\mingw\include\Windows\MgwHelp32.dll: SymGetLineFromAddrW64()
+# 4 0x7527B7BF in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 5 0x6624E3D3 in c:\codeblocks\mingw\include\Windows\MgwHelp32.dll: SymGetLineFromAddrW64()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  2 2024 18:11:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 02 2024 18:11:48
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
