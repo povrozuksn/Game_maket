@@ -269,3 +269,50 @@ Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
 Directory:	C:\Users\root\source\repos\Pictures
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 190, 95} не полностью лежит внутри изображения-источника {0, 0, 190, 59}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x3920 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00417523 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043CB3A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawCar() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DCF8 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (136):
+
+    134:             txBitBlt(txDC(), 0, 0, 800, 600, fon);
+    135:             car1.drawCar();
+=>  136:             car2.drawCar();
+    137:             car2.x += car2.v;
+    138:             bul.drawBul();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  5 2024 17:26:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 05 2024 17:26:11
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------

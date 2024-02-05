@@ -1,11 +1,9 @@
 #include "TXLib.h"
 
-struct Car
+struct Ship
 {
     HDC right;
     HDC left;
-    HDC up;
-    HDC down;
     HDC image;
     int w;
     int h;
@@ -14,18 +12,11 @@ struct Car
     int v;
     bool visible;
 
-    void drawCar()
+    void drawship()
     {
         if (visible)
         {
-            if (image == right || image == left)
-                {
-                    txTransparentBlt (txDC(), x, y, w, h, image, 0, 0, TX_WHITE);
-                }
-            else if (image == up || image == down)
-                {
-                    txTransparentBlt (txDC(), x, y, h, w, image, 0, 0, TX_WHITE);
-                }
+            txTransparentBlt (txDC(), x, y, w, h, image, 0, 0, TX_WHITE);
         }
     }
 };
@@ -35,32 +26,17 @@ struct Bul
     int x;
     int y;
     int v;
+    HDC image;
     bool visible;
 
     void drawBul()
     {
         if(visible)
         {
-            txSetColor(TX_WHITE);
-            txSetFillColor(TX_WHITE);
-            txCircle(x, y, 5);
+            txTransparentBlt (txDC(), x, y, 20, 78, image, 0, 0, TX_WHITE);
         }
     }
 
-};
-
-struct Mario
-{
-    int x;
-    int y;
-    int vy;
-    HDC image;
-    int level;
-
-    void drawMario()
-    {
-        txTransparentBlt (txDC(), x, y, 100, 124, image, 0, 0, TX_BLACK);
-    }
 };
 
 struct Button
@@ -98,14 +74,15 @@ txCreateWindow (800, 600);
     Button btn_help  = {300, 170, 200, 50, "ÑÏÐÀÂÊÀ"};
     Button btn_exit  = {300, 240, 200, 50, "ÂÛÕÎÄ"};
 
-    Car car1 = {txLoadImage("Pictures/rightCar1.bmp"), txLoadImage("Pictures/leftCar1.bmp"), txLoadImage("Pictures/upCar1.bmp"), txLoadImage("Pictures/downCar1.bmp"), car1.up, 190, 95, 400, 400, 15, true};
-    Car car2 = {txLoadImage("Pictures/rightCar2.bmp"), txLoadImage("Pictures/leftCar2.bmp"), txLoadImage("Pictures/upCar2.bmp"), txLoadImage("Pictures/downCar2.bmp"), car2.right, 190, 95, 400, 0, 15, true};
+    Ship ship1 = {txLoadImage("Pictures/boat.bmp"), ship1.right, ship1.right, 59, 186, 400, 500, 15, true};
+    Ship ship2 = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 0, 15, true};
 
-    Bul bul = {400, 300, 0, false};
+    Bul bul = {400, 300, 0, txLoadImage("Pictures/torpeda.bmp"), false};
 
-    Mario mario = {200, 400, 20, txLoadImage("Pictures/mario.bmp"), 524};
+    int popadanie = 0;
+    char str[];
 
-    while (!GetAsyncKeyState (VK_ESCAPE))
+    while (PAGE != "exit")
     {
         txSetFillColor (TX_BLACK);
         txClear();
@@ -134,49 +111,45 @@ txCreateWindow (800, 600);
                 txMouseX() > btn_exit.x && txMouseX() < btn_exit.x + btn_exit.w &&
                 txMouseY() > btn_exit.y && txMouseY() < btn_exit.y + btn_exit.h )
             {
-                PAGE = "help";
+                PAGE = "exit";
             }
         }
 
         //Ñòðàíèöà HELP
         if(PAGE == "help")
         {
-        
+            txSetColor(TX_WHITE);
+            txDrawText(0, 0, 800, 600, "Ñïðàâêà");
+            if(GetAsyncKeyState (VK_ESCAPE))
+            {
+                PAGE = "menu";
+            }
         }
 
         // Ñòðàíèöà ÈÃÐÀ
         if(PAGE == "game")
         {
+            if(GetAsyncKeyState (VK_ESCAPE))
+                {
+                    PAGE = "menu";
+                }
             txBitBlt(txDC(), 0, 0, 800, 600, fon);
-            car1.drawCar();
-            car2.drawCar();
-            car2.x += car2.v;
+            ship1.drawship();
+            ship2.drawship();
+            ship2.x += ship2.v;
             bul.drawBul();
             bul.y -= bul.v;
-            mario.drawMario();
-            mario.y += mario.vy;
-            mario.vy += 2;
-
-            if(mario.y+124 >= mario.level)
-            {
-                mario.vy = 0;
-            }
-
-            if(GetAsyncKeyState ('Y'))
-            {
-                mario.vy = -20;
-            }
 
             if(GetAsyncKeyState ('A'))
             {
-                car1.x -= car1.v;
+                ship1.x -= ship1.v;
             }
             else if(GetAsyncKeyState ('D'))
             {
-                car1.x += car1.v;
+                ship1.x += ship1.v;
             }
 
-            if(car1.x+car1.h/2>400)
+            if(ship1.x+ship1.h/2>400)
             {
                 fon = fon2;
             }
@@ -185,49 +158,50 @@ txCreateWindow (800, 600);
                 fon = fon1;
             }
 
-            if(car1.x<0)
+            if(ship1.x<0)
             {
-                car1.x = 0;
+                ship1.x = 0;
             }
-            if(car1.x+95>800)
+            if(ship1.x+59>800)
             {
-                car1.x = 800-95;
+                ship1.x = 800-95;
             }
 
-            if(car2.x<0)
+            if(ship2.x<0)
             {
-                car2.v = -car2.v;
-                car2.image = car2.right;
+                ship2.v = -ship2.v;
+                ship2.image = ship2.right;
             }
-            if(car2.x+190>800)
+            if(ship2.x+190>800)
             {
-                car2.v = -car2.v;
-                car2.image = car2.left;
+                ship2.v = -ship2.v;
+                ship2.image = ship2.left;
             }
 
             if(GetAsyncKeyState (VK_SPACE))
             {
-                bul.x = car1.x+car1.h/2;
-                bul.y = car1.y;
+                bul.x = ship1.x+ship1.w/2;
+                bul.y = ship1.y;
                 bul.visible = true;
                 bul.v = 10;
             }
 
-            if(bul.x>=car2.x && bul.x<=car2.x+car2.w && bul.y>=car2.y && bul.y<=car2.y+car2.h)
+            if(bul.x>=ship2.x && bul.x<=ship2.x+ship2.w && bul.y>=ship2.y && bul.y<=ship2.y+ship2.h)
             {
-                car2.visible = false;
+                ship2.visible = false;
                 bul.visible = false;
+                popadanie += 1;
             }
+            
+            sprintf(str, )
         }
 
         txEnd();
         txSleep(50);
     }
 
-    txDeleteDC (car1.right);
-    txDeleteDC (car1.left);
-    txDeleteDC (car1.up);
-    txDeleteDC (car1.down);
+    txDeleteDC (ship1.right);
+    txDeleteDC (ship1.left);
 
 txDisableAutoPause();
 txTextCursor (false);
