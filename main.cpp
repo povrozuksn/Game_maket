@@ -70,17 +70,30 @@ txCreateWindow (800, 600);
     HDC fon2 = txLoadImage("Pictures/fon2.bmp");
     HDC fon = fon1;
 
-    Button btn_start = {300, 100, 200, 50, "—“¿–“"};
-    Button btn_help  = {300, 170, 200, 50, "—œ–¿¬ ¿"};
-    Button btn_exit  = {300, 240, 200, 50, "¬€’Œƒ"};
+    int count_btn = 5;
+    Button btn[count_btn];
+
+    btn[0]  = {300, 100, 200, 50, "—“¿–“"};
+    btn[1]  = {300, 170, 200, 50, "—œ–¿¬ ¿"};
+    btn[2]  = {300, 240, 200, 50, "¬€’Œƒ"};
+    btn[3]  = {300, 310, 200, 50, "œ¿–¿Ã≈“–€"};
+    btn[4]  = {300, 380, 200, 50, " Œ¡ ¿¬“Œ–≈"};
 
     Ship ship1 = {txLoadImage("Pictures/boat.bmp"), ship1.right, ship1.right, 59, 186, 400, 500, 15, true};
-    Ship ship2 = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 0, 5, true};
+
+    int count_ship = 3;
+    Ship ship[count_ship];
+    ship[0] = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), txLoadImage("Pictures/ship_r.bmp"), 190, 59, 400, 0, 5, true};
+    ship[1] = {ship[0].right, ship[0].left, ship[0].right, 190, 59, 0, 40, 5, true};
+    ship[2] = {ship[0].right, ship[0].left, ship[0].right, 190, 59, 600, 80, 5, true};
 
     Bul bul = {400, 300, 0, txLoadImage("Pictures/torpeda.bmp"), false};
 
     int popadanie = 0;
     char str[50];
+
+    int x_mouse;
+    int y_mouse;
 
     while (PAGE != "exit")
     {
@@ -92,24 +105,26 @@ txCreateWindow (800, 600);
         //—Ú‡ÌËˆ‡ Ã≈Õﬁ
         if(PAGE == "menu")
         {
-            btn_start.draw();
-            btn_help.draw();
-            btn_exit.draw();
+            for(int i=0; i<count_btn; i++)
+            {
+                btn[i].draw();
+            }
+
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_start.x && txMouseX() < btn_start.x + btn_start.w &&
-                txMouseY() > btn_start.y && txMouseY() < btn_start.y + btn_start.h )
+                txMouseX() > btn[0].x && txMouseX() < btn[0].x + btn[0].w &&
+                txMouseY() > btn[0].y && txMouseY() < btn[0].y + btn[0].h )
             {
                 PAGE = "game";
             }
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_help.x && txMouseX() < btn_help.x + btn_help.w &&
-                txMouseY() > btn_help.y && txMouseY() < btn_help.y + btn_help.h )
+                txMouseX() > btn[1].x && txMouseX() < btn[1].x + btn[1].w &&
+                txMouseY() > btn[1].y && txMouseY() < btn[1].y + btn[1].h )
             {
                 PAGE = "help";
             }
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_exit.x && txMouseX() < btn_exit.x + btn_exit.w &&
-                txMouseY() > btn_exit.y && txMouseY() < btn_exit.y + btn_exit.h )
+                txMouseX() > btn[2].x && txMouseX() < btn[2].x + btn[2].w &&
+                txMouseY() > btn[2].y && txMouseY() < btn[2].y + btn[2].h )
             {
                 PAGE = "exit";
             }
@@ -135,8 +150,17 @@ txCreateWindow (800, 600);
                 }
             txBitBlt(txDC(), 0, 0, 800, 600, fon);
             ship1.drawship();
-            ship2.drawship();
-            ship2.x += ship2.v;
+
+            for(int i=0; i<count_ship; i++)
+            {
+                ship[i].drawship();
+            }
+
+            for(int i=0; i<count_ship; i++)
+            {
+                ship[i].x += ship[i].v;
+            }
+
             bul.drawBul();
             bul.y -= bul.v;
 
@@ -167,15 +191,18 @@ txCreateWindow (800, 600);
                 ship1.x = 800-59;
             }
 
-            if(ship2.x<-300)
+            for (int i=0; i<count_ship; i++)
             {
-                ship2.v = -ship2.v;
-                ship2.image = ship2.right;
-            }
-            if(ship2.x+190>1300)
-            {
-                ship2.v = -ship2.v;
-                ship2.image = ship2.left;
+                if(ship[i].x<-300)
+                {
+                    ship[i].v = -ship[i].v;
+                    ship[i].image = ship[i].right;
+                }
+                if(ship[i].x+190>1300)
+                {
+                    ship[i].v = -ship[i].v;
+                    ship[i].image = ship[i].left;
+                }
             }
 
             if(GetAsyncKeyState (VK_SPACE))
@@ -186,18 +213,29 @@ txCreateWindow (800, 600);
                 bul.v = 10;
             }
 
-            if(bul.x>=ship2.x && bul.x<=ship2.x+ship2.w && bul.y>=ship2.y && bul.y<=ship2.y+ship2.h)
+             for (int i=0; i<count_ship; i++)
             {
-                ship2.visible = false;
-                bul.visible = false;
-                txSleep(50);
-                popadanie += 1;
+                if(bul.x>=ship[i].x && bul.x<=ship[i].x+ship[i].w && bul.y>=ship[i].y && bul.y<=ship[i].y+ship[i].h)
+                {
+                    ship[i].visible = false;
+                    bul.visible = false;
+                    ship[i].x = 1000;
+                    txSleep(50);
+                    popadanie += 1;
+                    ship[i].visible = true;
+                }
             }
-
-
 
             sprintf(str, "◊ËÒÎÓ ÔÓÔ‡‰‡ÌËÈ - %d", popadanie);
             txTextOut(0, 400, str);
+
+            x_mouse = txMouseX();
+            sprintf(str, "X mouse - %d", x_mouse);
+            txTextOut(0, 0, str);
+
+            y_mouse = txMouseY();
+            sprintf(str, "Y mouse - %d", y_mouse);
+            txTextOut(0, 20, str);
         }
 
         txEnd();

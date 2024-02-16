@@ -316,3 +316,379 @@ Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
 Directory:	C:\Users\root\source\repos\Pictures
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x26A8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043D01A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041E120 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 17:58:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 17:58:36
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x360C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CF1A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041E012 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:00:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:00:07
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:50
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:49
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#3: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:50
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#4: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:49
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#5: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:49
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#6: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x610 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: txTransparentBlt() at c:/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0043CE5A in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: drawship() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041DF5C in C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe: main() at C:/Users/root/source/repos/Pictures/main.cpp (153):
+
+    151:             for(int i=0; i<count_ship; i++)
+    152:             {
+=>  153:                 ship[i].drawship();
+    154:             }
+    155: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2024 18:01:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2024 18:01:49
+
+Run file:	C:\Users\root\source\repos\Pictures\bin\Debug\Pictures.exe
+Directory:	C:\Users\root\source\repos\Pictures
+
+--------------------------------------------------

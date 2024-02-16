@@ -70,17 +70,26 @@ txCreateWindow (800, 600);
     HDC fon2 = txLoadImage("Pictures/fon2.bmp");
     HDC fon = fon1;
 
-    Button btn_start = {300, 100, 200, 50, "—“¿–“"};
-    Button btn_help  = {300, 170, 200, 50, "—œ–¿¬ ¿"};
-    Button btn_exit  = {300, 240, 200, 50, "¬€’Œƒ"};
+    int count_btn = 5;
+    Button btn[count_btn];
+
+    btn[0]  = {300, 100, 200, 50, "—“¿–“"};
+    btn[1]  = {300, 170, 200, 50, "—œ–¿¬ ¿"};
+    btn[2]  = {300, 240, 200, 50, "¬€’Œƒ"};
+    btn[3]  = {300, 310, 200, 50, "œ¿–¿Ã≈“–€"};
+    btn[4]  = {300, 380, 200, 50, " Œ¡ ¿¬“Œ–≈"};
 
     Ship ship1 = {txLoadImage("Pictures/boat.bmp"), ship1.right, ship1.right, 59, 186, 400, 500, 15, true};
-    Ship ship2 = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 0, 15, true};
+    
+    Ship ship[3];
+    ship[0] = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 0, 5, true};
+    ship[1] = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 20, 5, true};
+    ship[2] = {txLoadImage("Pictures/ship_r.bmp"), txLoadImage("Pictures/ship_l.bmp"), ship2.right, 190, 59, 400, 40, 5, true};
 
     Bul bul = {400, 300, 0, txLoadImage("Pictures/torpeda.bmp"), false};
 
     int popadanie = 0;
-    char str[];
+    char str[50];
 
     while (PAGE != "exit")
     {
@@ -92,24 +101,26 @@ txCreateWindow (800, 600);
         //—Ú‡ÌËˆ‡ Ã≈Õﬁ
         if(PAGE == "menu")
         {
-            btn_start.draw();
-            btn_help.draw();
-            btn_exit.draw();
+            for(int i=0; i<count_btn; i++)
+            {
+                btn[i].draw();
+            }
+
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_start.x && txMouseX() < btn_start.x + btn_start.w &&
-                txMouseY() > btn_start.y && txMouseY() < btn_start.y + btn_start.h )
+                txMouseX() > btn[0].x && txMouseX() < btn[0].x + btn[0].w &&
+                txMouseY() > btn[0].y && txMouseY() < btn[0].y + btn[0].h )
             {
                 PAGE = "game";
             }
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_help.x && txMouseX() < btn_help.x + btn_help.w &&
-                txMouseY() > btn_help.y && txMouseY() < btn_help.y + btn_help.h )
+                txMouseX() > btn[1].x && txMouseX() < btn[1].x + btn[1].w &&
+                txMouseY() > btn[1].y && txMouseY() < btn[1].y + btn[1].h )
             {
                 PAGE = "help";
             }
             if( txMouseButtons() == 1 &&
-                txMouseX() > btn_exit.x && txMouseX() < btn_exit.x + btn_exit.w &&
-                txMouseY() > btn_exit.y && txMouseY() < btn_exit.y + btn_exit.h )
+                txMouseX() > btn[2].x && txMouseX() < btn[2].x + btn[2].w &&
+                txMouseY() > btn[2].y && txMouseY() < btn[2].y + btn[2].h )
             {
                 PAGE = "exit";
             }
@@ -135,7 +146,11 @@ txCreateWindow (800, 600);
                 }
             txBitBlt(txDC(), 0, 0, 800, 600, fon);
             ship1.drawship();
-            ship2.drawship();
+            
+            for(int i=0; )
+            ship[i].drawship();
+            
+            
             ship2.x += ship2.v;
             bul.drawBul();
             bul.y -= bul.v;
@@ -164,15 +179,15 @@ txCreateWindow (800, 600);
             }
             if(ship1.x+59>800)
             {
-                ship1.x = 800-95;
+                ship1.x = 800-59;
             }
 
-            if(ship2.x<0)
+            if(ship2.x<-300)
             {
                 ship2.v = -ship2.v;
                 ship2.image = ship2.right;
             }
-            if(ship2.x+190>800)
+            if(ship2.x+190>1300)
             {
                 ship2.v = -ship2.v;
                 ship2.image = ship2.left;
@@ -190,10 +205,14 @@ txCreateWindow (800, 600);
             {
                 ship2.visible = false;
                 bul.visible = false;
+                ship2.x = 1000;
+                txSleep(50);
                 popadanie += 1;
+                ship2.visible = true;
             }
-            
-            sprintf(str, )
+
+            sprintf(str, "◊ËÒÎÓ ÔÓÔ‡‰‡ÌËÈ - %d", popadanie);
+            txTextOut(0, 400, str);
         }
 
         txEnd();
